@@ -915,7 +915,7 @@ def _expected(observed):
     if len(o) == 0:
         return []
     if len(o) == 1:
-        return [[sum(o[0]) / float(len(o[0]))] * len(o[0])]
+        return [[np.mean(o[0])] * len(o[0])]
     n = [sum(o[i]) for i in range(len(o))]
     m = [sum(o[i][j] for i in range(len(o))) for j in range(len(o[0]))]
     s = float(sum(n))
